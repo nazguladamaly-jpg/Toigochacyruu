@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f4ec">
+  <meta name="description" content="Гулукан эженин 60 жаш мааракесине чакыруу">
+  <title>Гулукан — 60 жаш мааракеси</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="jubileeMusic" preload="auto" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <!-- АЧЫЛУУЧУ КОНВЕРТ -->
+    <section class="envelope-screen" id="envelopeScreen">
+      <div class="corner corner-tl">❧</div>
+      <div class="corner corner-br">❧</div>
+
+      <p class="eyebrow">СИЗГЕ АРНАЛГАН ЧАКЫРУУ</p>
+
+      <button class="envelope-button" id="openInvitation"
+              aria-label="Конвертти ачуу">
+        <span class="envelope">
+          <span class="envelope-back"></span>
+
+          <span class="letter">
+            <span class="letter-ornament">✧</span>
+            <span class="letter-name">Гулукан</span>
+            <span class="letter-age">60 ЖАШ</span>
+          </span>
+
+          <span class="envelope-left"></span>
+          <span class="envelope-right"></span>
+          <span class="envelope-bottom"></span>
+          <span class="envelope-flap"></span>
+
+          <span class="seal">Г</span>
+        </span>
+      </button>
+
+      <p class="tap-hint">ЧАКЫРУУНУ АЧУУ ҮЧҮН БАСЫҢЫЗ</p>
+      <p class="music-note">♫ Музыка конверт ачылганда башталат</p>
+    </section>
+
+    <!-- ЧАКЫРУУ БАРАКЧАСЫ -->
+    <section class="invitation hidden" id="invitation">
+      <div class="invitation-frame">
+        <div class="ornament">❧ ✧ ❧</div>
+
+        <p class="eyebrow reveal">УРМАТТУУ КОНОГУБУЗ!</p>
+
+        <h1 class="reveal">
+          Алтын өмүрдүн<br>
+          <span>ажайып белеси</span>
+        </h1>
+
+        <div class="gold-line reveal">✦</div>
+
+        <p class="small-title reveal">60 ЖАШТЫК МААРАКЕ</p>
+        <h2 class="jubilarian reveal">Гулукан</h2>
+
+        <p class="invite-copy reveal">
+          Сизди кубанычыбызды бөлүшүүгө жана өзгөчө күнүбүздүн
+          көркүн арттырууга чын жүрөктөн чакырабыз.
+        </p>
+
+        <div class="details reveal">
+          <div class="detail-item">
+            <span class="detail-icon">✧</span>
+            <span class="detail-label">КҮНҮ</span>
+            <strong>18-ноябрь, 2026-жыл</strong>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-icon">◷</span>
+            <span class="detail-label">СААТЫ</span>
+            <strong>17:00</strong>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-icon">⌖</span>
+            <span class="detail-label">ӨТҮҮЧҮ ЖЕРИ</span>
+            <strong>«Арзу» рестораны</strong>
+            <span>Бишкек шаары, Проспект Победы, 311</span>
+          </div>
+        </div>
+
+        <p class="hosts reveal">
+          Той ээлери: <strong>Мурат жана Гулукан</strong>
+        </p>
+
+        <!-- ТӨРТ СҮРӨТ -->
+        <div class="photo-gallery reveal">
+          <figure>
+            <img src="assets/images/design-1.jpeg"
+                 alt="Алтын оймо-чиймелүү ак дизайн">
+          </figure>
+          <figure>
+            <img src="assets/images/design-2.jpeg"
+                 alt="Алтын оймо-чиймелер">
+          </figure>
+          <figure>
+            <img src="assets/images/design-3.jpeg"
+                 alt="Мааракеге арналган дизайн">
+          </figure>
+          <figure>
+            <img src="assets/images/envelope-reference.png"
+                 alt="Алтын мөөрү бар конверт">
+          </figure>
+        </div>
+
+        <!-- КАТЫШУУНУ ТАСТЫКТОО -->
+        <div class="rsvp reveal" id="rsvp">
+          <div class="ornament">✧ ❧ ✧</div>
+          <h3>Сизди күтөбүз!</h3>
+
+          <p>
+            Кымбаттуу коногубуз, мааракебизге келериңиз биз үчүн
+            чоң кубаныч! Төмөнкү форманы толтуруп, катышарыңызды
+            билдирип коюңуз.
+          </p>
+
+          <form id="rsvpForm">
+            <label for="guestName">Аты-жөнүңүз</label>
+            <input
+              id="guestName"
+              name="Аты-жөнү"
+              type="text"
+              placeholder="Аты-жөнүңүздү жазыңыз"
+              autocomplete="name"
+              required
+            >
+
+            <label for="guestCount">Канча адам келесиздер?</label>
+            <select id="guestCount" name="Коноктордун саны" required>
+              <option value="" selected disabled>Санды тандаңыз</option>
+              <option value="1">1 адам</option>
+              <option value="2">2 адам</option>
+              <option value="3">3 адам</option>
+              <option value="4">4 адам</option>
+              <option value="5">5 адам</option>
+              <option value="6 же андан көп">6 же андан көп адам</option>
+            </select>
+
+            <button class="submit-button" type="submit">
+              Келериңизди тастыктаңыз
+            </button>
+          </form>
+
+          <div class="success-message hidden" id="successMessage">
+            <span class="success-icon">♡</span>
+            <h4>Рахмат, кымбаттуу коногубуз!</h4>
+            <p>
+              Жообуңуз ийгиликтүү кабыл алынды.
+              Гулукан эженин 60 жаш мааракесинде көрүшкөнчө!
+            </p>
+          </div>
+        </div>
+
+        <footer class="footer">
+          Сиздерди кубаныч менен күтөбүз
+          <span>✦</span>
+        </footer>
+
+        <button class="music-toggle" id="musicToggle" type="button">
+          ♫ Музыканы токтотуу
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
